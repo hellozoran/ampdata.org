@@ -1,4 +1,4 @@
-# web-starter
+# AmpData.org
 
 ## Build Setup
 

@@ -1,6 +1,6 @@
 export default {
 
-  target: 'static',
+  target: 'server',
 
   head: {
     title: 'web-starter',
