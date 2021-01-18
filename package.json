@@ -2,6 +2,11 @@
   "name": "web-starter",
   "version": "1.0.0",
   "private": true,
+  "config": {
+    "nuxt": {
+      "port": "4050"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
