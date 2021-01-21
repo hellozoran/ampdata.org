@@ -9,18 +9,26 @@ export default {
       type: String,
       required: false,
       default: null
+    },
+    font: {
+      type: String,
+      required: false,
+      default: 'futura'
     }
   },
   computed: {
     asClass() {
       return this.as ? this.as : `h${this.level}`
+    },
+    fontClass() {
+      return this.font === 'balboa' ? 'font-balboa' : 'font-futura'
     }
   },
   render(createElement) {
     return createElement(
       'h' + this.level,
       {
-        class: `heading ${this.asClass}`
+        class: `heading ${this.asClass} ${this.fontClass}`
       },
       this.$slots.default
     )
@@ -33,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {}
 
 .h1 { @apply text-6xl }
 .h2 { @apply text-4xl }
-.h3 {}
+.h3 { @apply text-lg }
 .h4 {}
 .h5 {}
 .h6 {}

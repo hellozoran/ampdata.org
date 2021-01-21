@@ -1,14 +1,10 @@
 <template>
   <div class="home">
-    <div>
-      <Heading :level="1" as="h2" class="my-5">
-        i18n + Tailwind + Colormode
-      </Heading>
-      <Btn :to="localePath('sample')" class="mb-4">
-        {{ $t('welcome') }}
-      </Btn>
-      <p>color preference: {{ $colorMode.preference }}</p>
-    </div>
+    <AmpNav />
+    <AmpIntro />
+    <AmpStory />
+    <AmpSchematic />
+    <AmpLayouts />
   </div>
 </template>
 
@@ -19,7 +15,7 @@ export default {
   data() {
     return {
       meta: {
-        title: 'Nuxt project starter',
+        title: 'AmpData',
         description: 'Sample meta description',
         sharecard: 'https://sharecard.com/image.jpg',
         url: this.$route.path
@@ -29,8 +25,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .home {
-  @apply flex items-center justify-center flex-col text-center min-h-screen;
+  @apply flex items-center justify-center flex-col text-center min-h-screen relative;
 }
 </style>

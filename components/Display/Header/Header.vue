@@ -1,50 +1,27 @@
 <template>
-  <div class="header-wrapper dark:bg-gray-900">
-    <Container>
-      <header class="header">
-        <RouterLink :to="localePath('index')">
-          <Logo class="logo" />
-        </RouterLink>
-        <HamburgerIcon :is-open="isOpen" @toggle="toggleMenu" />
-        <Nav :is-open="isOpen" @itemClicked="closeMenu" />
-      </header>
-    </Container>
-  </div>
+  <header class="header dark:bg-dark-night dark:text-white text-dark-night">
+    <RouterLink :to="localePath('index')">
+      <Logo class="logo" />
+    </RouterLink>
+    <Search />
+  </header>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      isOpen: false
-    }
-  },
-  methods: {
-    toggleMenu() {
-      this.isOpen = !this.isOpen
-    },
-    closeMenu() {
-      if (this.$mq !== 'lg') {
-        this.isOpen = false
-      }
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .header {
   @apply
     py-6
+    px-8
     flex
     items-center
     justify-between
     w-full
     top-0
     left-0
-    z-50;
+    z-50
+    absolute;
 }
 .logo {
-  @apply h-10;
+  @apply h-5;
 }
 </style>

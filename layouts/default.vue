@@ -10,6 +10,9 @@
 html {
   transition: all 150ms ease;
 }
+body {
+  background-color: white;
+}
 .light-mode {
   @apply bg-white text-gray-800;
 }
