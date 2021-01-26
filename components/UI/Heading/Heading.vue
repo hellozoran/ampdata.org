@@ -39,7 +39,10 @@ export default {
 <style lang="scss" scoped>
 h1, h2, h3, h4, h5, h6 {}
 
-.h1 { @apply text-6xl }
+.h1 {
+  @apply text-6xl leading-none;
+  @screen lg { @apply leading-tight }
+}
 .h2 { @apply text-4xl }
 .h3 { @apply text-lg }
 .h4 {}

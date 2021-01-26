@@ -9,7 +9,7 @@
         :key="schematic.file"
         :title="schematic.title"
         :file="schematic.file"
-        class="bg-dark-night" />
+        class="bg-dark-night item" />
     </div>
   </div>
 </template>
@@ -22,12 +22,33 @@ export default {
         { title: 'Original Fender schematic', file: 'fender-5f1-champ-layout-original.pdf' }
       ]
     }
+  },
+  mounted() {
+    this.itemReveal()
+  },
+  methods: {
+    itemReveal() {
+      const gsap = this.$gsap
+      const ScrollTrigger = this.$ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger)
+      gsap.from('.item', {
+        scrollTrigger: {
+          trigger: '.item',
+          scrub: true,
+          start: 'center 100%',
+          end: '+=100'
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.25
+      })
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .amp-schem {
-  @apply bg-dark-night-100 min-h-screen text-white w-full flex items-center justify-center flex-col relative z-30;
+  @apply bg-dark-night-100 min-h-screen text-white w-full flex items-center justify-center flex-col relative z-30 p-4;
 }
 </style>
