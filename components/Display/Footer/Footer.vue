@@ -1,9 +1,9 @@
 <template lang="html">
-  <footer class="footer dark:bg-gray-900 bg-gray-100 text-xs text-gray-600 dark:text-gray-500">
-    <LanguageSwitcher />
-    <div class="container mx-auto">
+  <footer class="footer bg-dark-night-100 text-xs text-sand-bar">
+    <!-- <LanguageSwitcher /> -->
+    <Container>
       &copy; {{ currentYear }}. {{ $t('copyright_text') }}
-    </div>
+    </Container>
   </footer>
 </template>
 
@@ -19,6 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  @apply py-16 px-4 text-center;
+  @apply py-8 px-4 text-center;
 }
 </style>

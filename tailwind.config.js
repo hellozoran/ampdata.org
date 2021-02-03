@@ -1,8 +1,16 @@
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        futura: ['futura-pt', 'sans-serif'],
+        balboa: ['balboa-plus-inline', 'sans-serif']
+      },
       colors: {
-        'brand-yellow': 'var(--brand-yellow)'
+        sunshine: 'var(--sunshine)',
+        'dark-night': 'var(--dark-night)',
+        'dark-night-100': 'var(--dark-night-100)',
+        'dark-night-900': 'var(--dark-night-900)',
+        'sand-bar': 'var(--sand-bar)'
       }
     },
     darkSelector: '.dark-mode'
