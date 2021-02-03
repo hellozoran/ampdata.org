@@ -8,5 +8,7 @@
     "password": "Password",
     "submit": "Validate form"
   },
-  "ui_elements": "UI Elements"
+  "ui_elements": "UI Elements",
+  "copy_link": "Copy URL",
+  "copied": "Copied!"
 }

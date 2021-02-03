@@ -10,12 +10,12 @@
         </svg>
         Download
       </a>
-      <button class="flex items-center outline-none focus:text-white border-0 focus:outline-none" tabindex="0" @click="copyURL">
+      <CopyOnClick :url="fileURL">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
         </svg>
-        Copy URL
-      </button>
+        {{ $t('copy_link') }}
+      </CopyOnClick>
     </div>
   </div>
 </template>
@@ -30,29 +30,23 @@ export default {
     fileURL() {
       return `/layout/${this.file}`
     }
-  },
-  methods: {
-    copyURL(e) {
-      const url = `https://ampdata.org/${this.fileURL}`
-      if (!navigator.clipboard) {
-        return
-      }
-
-      navigator.clipboard.writeText(url)
-    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .asset-list-item {
-  @apply border-dark-night-100 rounded-md overflow-hidden p-4 mb-2 transition-all duration-200;
+  @apply border-dark-night-100 rounded-md overflow-hidden px-8 py-4 mb-2 transition-all duration-200;
   &:hover {
     @apply shadow-lg;
   }
-  a:link {
+  a:link,
+  button {
     @apply items-center transition-colors duration-200;
   }
+  button:hover,
+  button:active,
+  button:focus,
   a:hover,
   a:focus {
     @apply text-white;
