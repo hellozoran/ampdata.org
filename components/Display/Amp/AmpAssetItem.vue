@@ -1,21 +1,21 @@
 <template lang="html">
   <div class="asset-list-item">
     <div class="flex items-center text-sand-bar flex-row">
-      <a :href="fileURL" target="_blank" class="flex flex-grow text-xl">
+      <a :href="fileURL" target="_blank" tabindex="0" class="flex flex-grow text-xl focus:text-white">
         {{ title }}
       </a>
-      <a href="#" class="mr-8 hidden md:flex">
+      <a href="#" tabindex="0" class="mr-8 hidden md:flex">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
         </svg>
         Download
       </a>
-      <a href="#" class="flex">
+      <button class="flex items-center outline-none focus:text-white border-0 focus:outline-none" tabindex="0" @click="copyURL">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
         </svg>
         Copy URL
-      </a>
+      </button>
     </div>
   </div>
 </template>
@@ -29,6 +29,16 @@ export default {
   computed: {
     fileURL() {
       return `/layout/${this.file}`
+    }
+  },
+  methods: {
+    copyURL(e) {
+      const url = `https://ampdata.org/${this.fileURL}`
+      if (!navigator.clipboard) {
+        return
+      }
+
+      navigator.clipboard.writeText(url)
     }
   }
 }

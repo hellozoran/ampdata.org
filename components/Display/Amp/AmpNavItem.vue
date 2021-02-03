@@ -1,7 +1,8 @@
 <template lang="html">
   <a
     :class="{ 'active': active }"
-    class="amp-nav-item cursor-pointer"
+    class="amp-nav-item cursor-pointer focus:text-indigo-900"
+    tabindex="-1"
     @click="smoothScrollToSection(link)">
     <span>{{ itemNumber }}</span>
     <div>{{ title }}</div>

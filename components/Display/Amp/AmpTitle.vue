@@ -10,7 +10,7 @@
       Schematic & Layout
     </Paragraph>
     <Paragraph size="xs" class="font-bold uppercase tracking-wider">
-      Schematic & Layout
+      From AmpData.org
     </Paragraph>
   </div>
 </template>

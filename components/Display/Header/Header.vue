@@ -1,6 +1,6 @@
 <template>
   <header class="header dark:bg-dark-night dark:text-white text-dark-night">
-    <RouterLink :to="localePath('index')">
+    <RouterLink :to="localePath('index')" tabindex="0">
       <Logo class="logo" />
     </RouterLink>
     <Search />
