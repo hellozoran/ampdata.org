@@ -3,7 +3,7 @@ export default {
   target: 'server',
 
   head: {
-    title: 'web-starter',
+    title: 'ampdata',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

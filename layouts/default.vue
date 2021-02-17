@@ -11,10 +11,10 @@ html {
   transition: all 150ms ease;
 }
 body {
-  background-color: white;
+  @apply bg-sunshine;
 }
 .light-mode {
-  @apply bg-white text-gray-800;
+  @apply bg-sunshine text-gray-800;
 }
 .dark-mode {
   @apply bg-gray-800 text-white;

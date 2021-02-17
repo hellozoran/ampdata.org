@@ -23,6 +23,8 @@
     "nuxt-gsap-module": "^1.1.1",
     "nuxt-i18n": "^6.15.4",
     "nuxt-mq": "^2.0.1",
+    "swiper": "^6.4.10",
+    "vue-awesome-swiper": "^4.1.1",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {

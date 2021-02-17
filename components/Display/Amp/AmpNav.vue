@@ -1,12 +1,12 @@
 <template lang="html">
-  <div class="amp-nav hidden lg:block">
+  <nav class="amp-nav hidden lg:block" aria-label="Sections navigation">
     <AmpNavItem
       v-for="(nav, i) in navList"
       :key="nav.link"
       :index="i + 1"
       :link="nav.link"
       :title="nav.title" />
-  </div>
+  </nav>
 </template>
 
 <script>
