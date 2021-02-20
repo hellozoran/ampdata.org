@@ -19,7 +19,7 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6",
+    "nuxt": "2.14.6",
     "nuxt-gsap-module": "^1.1.1",
     "nuxt-i18n": "^6.15.4",
     "nuxt-mq": "^2.0.1",

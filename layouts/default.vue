@@ -11,12 +11,15 @@ html {
   transition: all 150ms ease;
 }
 body {
-  background-color: white;
+  @apply bg-sunshine;
 }
 .light-mode {
-  @apply bg-white text-gray-800;
+  @apply text-gray-800;
 }
 .dark-mode {
-  @apply bg-gray-800 text-white;
+  @apply text-white;
+}
+.page {
+  @apply min-h-screen mt-24;
 }
 </style>
