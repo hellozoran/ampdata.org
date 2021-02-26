@@ -7,7 +7,7 @@
       <nuxt-link property="item" typeof="WebPage" to="/">
         <span property="name">Home</span>
       </nuxt-link>
-      <meta property="position" content="1" />
+      <meta property="position" content="1">
     </li>
     <li
       v-for="(crumb, index) in crumbs"
@@ -19,7 +19,7 @@
           $route.fullPath === crumb.path && title !== null ? title : crumb.title
         }}</span>
       </nuxt-link>
-      <meta property="position" :content="index + 2" />
+      <meta property="position" :content="index + 2">
     </li>
   </ol>
 </template>

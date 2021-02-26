@@ -1,24 +1,50 @@
 <template>
-  <div class="home">
-    <AmpNav />
-    <AmpIntro />
-    <AmpStory />
-    <AmpSchematic />
-    <AmpLayouts />
+  <div class="page pt-24">
+    <Container>
+      <Carousel>
+        <template v-slot:header>
+          <Heading :level="2" class="text-dark-night">
+            Fender
+          </Heading>
+        </template>
+        <div class="w-64 h-64 flex flex-shrink-0 bg-gray-800">
+          item 1
+        </div>
+        <div class="w-64 h-64 flex flex-shrink-0 bg-gray-800">
+          item 1
+        </div>
+        <div class="w-64 h-64 flex flex-shrink-0 bg-gray-800">
+          item 1
+        </div>
+        <div class="w-64 h-64 flex flex-shrink-0 bg-gray-800">
+          item 1
+        </div>
+        <div class="w-64 h-64 flex flex-shrink-0 bg-gray-800">
+          item 1
+        </div>
+        <div class="w-64 h-64 flex flex-shrink-0 bg-gray-800">
+          item 1
+        </div>
+        <div class="w-64 h-64 flex flex-shrink-0 bg-gray-800">
+          item 1
+        </div>
+      </Carousel>
+    </Container>
   </div>
 </template>
 
 <script>
 import pageMetadata from '~/mixins/pageMetadata'
+
 export default {
   mixins: [pageMetadata],
-  data() {
-    return {
-      meta: {
-        title: 'AmpData',
-        description: 'Sample meta description',
-        sharecard: 'https://sharecard.com/image.jpg',
-        url: this.$route.path
+  computed: {
+    meta() {
+      return {
+        title: 'Schematics, layouts and more',
+        description: '',
+        url: '',
+        sharecard: ''
       }
     }
   }
@@ -26,7 +52,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home {
-  @apply flex items-center justify-center flex-col text-center min-h-screen relative;
-}
+.page {}
 </style>
